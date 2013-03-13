@@ -1,0 +1,15 @@
+<h1>Whats going on?</h1>
+
+<p><%= link_to 'New Status', new_status_path, class: "btn btn-primary" %>
+</p>
+<div class="row">
+	<div class="span4">
+		<% @statuses.each do |status| %>
+	  	<div class="well">
+		  <strong><%= status.name %></strong><br/>
+		  <p class="lead"><%= link_to status.body, status %></p><br />
+			Posted <%= distance_of_time_in_words_to_now(status.created_at, include_seconds = false) %> ago.
+		  </div>
+		<% end %>
+	</div>
+</div>
