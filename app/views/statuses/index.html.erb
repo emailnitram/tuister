@@ -6,7 +6,7 @@
 	<div class="span4">
 		<% @statuses.each do |status| %>
 	  	<div class="well">
-		  <strong><%= status.name %></strong><br/>
+		  <strong><%= status.user.name %></strong><br/>
 		  <p class="lead"><%= link_to status.body, status %></p><br />
 			Posted <%= distance_of_time_in_words_to_now(status.created_at, include_seconds = false) %> ago.
 		  </div>

@@ -1,3 +1,3 @@
 # Tuister
 
-Twitter like application using Devise and Rspec
+Twitter like application using Devise and Rspec for testing

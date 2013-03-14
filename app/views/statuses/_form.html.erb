@@ -10,8 +10,8 @@
       </ul>
     </div>
   <% end %>
-
-    <%= f.input :name %>
+	  
+    <%= f.input :user_id, as: :hidden, input_html: { value: @user.id }, label: current_user.name %>
     <%= f.input :body %>
     <%= f.button :submit %>
 <% end %>

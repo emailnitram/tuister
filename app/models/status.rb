@@ -1,5 +1,6 @@
 class Status < ActiveRecord::Base
-  attr_accessible :body, :name
-  validates :name, presence: :true
+  attr_accessible :body, :user_id
+  
+  belongs_to :user
   validates :body, presence: :true, length: { maximum: 140 }
 end
