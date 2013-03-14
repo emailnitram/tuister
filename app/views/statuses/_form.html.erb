@@ -12,6 +12,6 @@
   <% end %>
 	  
     <%= f.input :user_id, as: :hidden, input_html: { value: @user.id }, label: current_user.name %>
-    <%= f.input :body %>
+    <%= f.input :body, as: :text, input_html: { rows: 5 } %>
     <%= f.button :submit %>
 <% end %>
